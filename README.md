@@ -2,6 +2,8 @@
 
 This is the map for the research and systems work I pulled out of Epistemos.
 
+For the commit-level source map, publication decisions, and validation record, see [`RECOVERY_AUDIT.md`](RECOVERY_AUDIT.md).
+
 The common idea is proof-carrying software: decisions should expose their scope, numerical kernels should expose their error, retrieval should expose its citations, schema repair should expose its patches, and research should expose what is proved versus what is still a candidate.
 
 ## Start here
@@ -27,6 +29,8 @@ The common idea is proof-carrying software: decisions should expose their scope,
 | --- | --- | --- |
 | [ols-vs-gradient-descent](https://github.com/BlickandMorty/ols-vs-gradient-descent) | reproducible closed-form OLS and batch-gradient comparison | working + tested |
 | [Epistemos Windows](https://github.com/BlickandMorty/epistemos-windows) | native C++/Swift/Rust architecture and ABI scaffold | scaffold + tested boundaries |
+| [kinetic-protocol](https://github.com/BlickandMorty/kinetic-protocol) | local-first, deny-by-default tool execution bridge | working + tested |
+| [ethos-eval](https://github.com/BlickandMorty/ethos-eval) | offline-first deterministic LLM behavior evaluation | working + tested |
 
 ## The formal and research layer
 
