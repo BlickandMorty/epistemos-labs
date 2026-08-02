@@ -1,0 +1,10 @@
+[package]
+name = "hyperdynamic-schema-repair"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "A bounded, witnessed fixed-point repair loop for evolving schemas."
+
+[lib]
+path = "src/lib.rs"
+
