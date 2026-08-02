@@ -22,7 +22,7 @@ The common idea is proof-carrying software: decisions should expose their scope,
 
 | Project | What it contains | Status |
 | --- | --- | --- |
-| [epistemos-formal-primitives](https://github.com/BlickandMorty/epistemos-formal-primitives) | 247 Lean theorem/lemma declarations and an exact proof-status ledger | 210 proof terms present; 37 candidates |
+| [epistemos-formal-primitives](https://github.com/BlickandMorty/epistemos-formal-primitives) | 246 actual Lean theorem/lemma declarations and an exact proof-status ledger | 209 proof terms present; 37 candidates |
 | [epistemos-research-canon](https://github.com/BlickandMorty/epistemos-research-canon) | the 5,749-line lattice explainer, theorem canon, Scope-Rex/substrate/EML/Eidos research, and recovery map | public research archive |
 
 ## How I separate claims
@@ -39,4 +39,3 @@ The recovered work came from the regular [Epistemos](https://github.com/Blickand
 ## Security architecture boundary
 
 The security lab is an original clean-room build. Shannon, OpenAEV, HackingBuddyGPT, and PentAGI were studied as architecture references. AGPL source from Shannon is not copied into these Apache-licensed repositories.
-
