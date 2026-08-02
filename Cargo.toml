@@ -1,0 +1,10 @@
+[package]
+name = "f-ulp-oracle"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "A binary16 ULP witness and acceptance oracle."
+
+[lib]
+path = "src/lib.rs"
+
