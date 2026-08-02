@@ -17,6 +17,16 @@ The common idea is proof-carrying software: decisions should expose their scope,
 | [hyperdynamic-schema-repair](https://github.com/BlickandMorty/hyperdynamic-schema-repair) | bounded repair with replayable patches | working + tested |
 | [vault-recall-benchmark](https://github.com/BlickandMorty/vault-recall-benchmark) | deterministic recall/MRR evaluation | working + tested |
 | [proof-carrying-security-lab](https://github.com/BlickandMorty/proof-carrying-security-lab) | authorized source analysis with evidence-gated findings | defensive working lab |
+| [belnap-evidence-gate](https://github.com/BlickandMorty/belnap-evidence-gate) | four-valued evidence admission, conflict abstention, replay receipts | working + tested |
+| [interrupt-score-router](https://github.com/BlickandMorty/interrupt-score-router) | five-signal bounded escalation with explicit falsifiers | working + tested |
+| [confidence-ladder-monitor](https://github.com/BlickandMorty/confidence-ladder-monitor) | tiered confidence admission, health metrics, receipt-chain replay | working + tested |
+
+## Systems and numerical work
+
+| Project | What it shows | Status |
+| --- | --- | --- |
+| [ols-vs-gradient-descent](https://github.com/BlickandMorty/ols-vs-gradient-descent) | reproducible closed-form OLS and batch-gradient comparison | working + tested |
+| [Epistemos Windows](https://github.com/BlickandMorty/epistemos-windows) | native C++/Swift/Rust architecture and ABI scaffold | scaffold + tested boundaries |
 
 ## The formal and research layer
 
@@ -39,3 +49,11 @@ The recovered work came from the regular [Epistemos](https://github.com/Blickand
 ## Security architecture boundary
 
 The security lab is an original clean-room build. Shannon, OpenAEV, HackingBuddyGPT, and PentAGI were studied as architecture references. AGPL source from Shannon is not copied into these Apache-licensed repositories.
+
+Transparent upstream forks are kept separately for study and future contribution:
+
+- [Shannon](https://github.com/BlickandMorty/shannon) — AGPL-3.0 white-box AI pentesting
+- [Strix](https://github.com/BlickandMorty/strix) — Apache-2.0 autonomous application-security testing
+- [PentAGI](https://github.com/BlickandMorty/pentagi) — MIT multi-agent pentesting orchestration
+
+Fork status and upstream history are intentionally preserved. Original portfolio work lives in the non-fork repositories above.
