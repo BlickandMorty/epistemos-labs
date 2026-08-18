@@ -1,6 +1,6 @@
 # belnap-evidence-gate
 
-[![CI](https://github.com/BlickandMorty/belnap-evidence-gate/actions/workflows/ci.yml/badge.svg)](https://github.com/BlickandMorty/belnap-evidence-gate/actions/workflows/ci.yml)
+[![CI](https://github.com/BlickandMorty/epistemos-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/BlickandMorty/epistemos-labs/actions/workflows/ci.yml)
 
 A deterministic claim-admission gate recovered from my older Epistemos
 research. Evidence may support a claim, refute it, do both, or do neither. The

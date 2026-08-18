@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 description = "Deterministic four-valued evidence gate with replayable receipts"
-repository = "https://github.com/BlickandMorty/belnap-evidence-gate"
+repository = "https://github.com/BlickandMorty/epistemos-labs/tree/main/experiments/belnap-evidence-gate"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }

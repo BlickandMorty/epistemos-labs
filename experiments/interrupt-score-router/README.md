@@ -1,6 +1,6 @@
 # interrupt-score-router
 
-[![CI](https://github.com/BlickandMorty/interrupt-score-router/actions/workflows/ci.yml/badge.svg)](https://github.com/BlickandMorty/interrupt-score-router/actions/workflows/ci.yml)
+[![CI](https://github.com/BlickandMorty/epistemos-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/BlickandMorty/epistemos-labs/actions/workflows/ci.yml)
 
 An auditable dynamic-compute policy recovered from my older Epistemos/HELIOS
 research. Instead of running the most expensive reasoning path for every token

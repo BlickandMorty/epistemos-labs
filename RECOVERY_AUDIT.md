@@ -37,12 +37,12 @@ The strongest recovered source seams were:
 
 | Historical source | Public destination | Boundary |
 |---|---|---|
-| `agent_core/src/research/belnap.rs` | [belnap-evidence-gate](https://github.com/BlickandMorty/belnap-evidence-gate) | Belnap logic is prior art; evidence admission and replay receipts are the systems contribution |
-| `epistemos-research/src/interrupt_score.rs` | [interrupt-score-router](https://github.com/BlickandMorty/interrupt-score-router) | five-signal HELIOS score rebuilt with validation, hash-chain replay, and a collapse falsifier |
-| `agent_core/src/research/confidence_floors.rs` | [confidence-ladder-monitor](https://github.com/BlickandMorty/confidence-ladder-monitor) | T1/T2/T3 doctrine rebuilt with policy validation and receipt verification |
+| `agent_core/src/research/belnap.rs` | [belnap-evidence-gate](experiments/belnap-evidence-gate) | Belnap logic is prior art; evidence admission and replay receipts are the systems contribution |
+| `epistemos-research/src/interrupt_score.rs` | [interrupt-score-router](experiments/interrupt-score-router) | five-signal HELIOS score rebuilt with validation, hash-chain replay, and a collapse falsifier |
+| `agent_core/src/research/confidence_floors.rs` | [confidence-ladder-monitor](experiments/confidence-ladder-monitor) | T1/T2/T3 doctrine rebuilt with policy validation and receipt verification |
 | E1-E7 and later Lean modules | [epistemos-formal-primitives](https://github.com/BlickandMorty/epistemos-formal-primitives) | exact proof-status ledger separates proved declarations from candidates |
 | lattice, substrate, HELIOS, EML, Eidos documents | [epistemos-research-canon](https://github.com/BlickandMorty/epistemos-research-canon) and [research](https://github.com/BlickandMorty/research) | research claims retain status tags and falsifiers |
-| agent capability and receipt logic | [deterministic-agent-kernel](https://github.com/BlickandMorty/deterministic-agent-kernel) and [scope-rex-admission](https://github.com/BlickandMorty/scope-rex-admission) | executable admission kernels rather than product-wide copies |
+| agent capability and receipt logic | [deterministic-agent-kernel](experiments/deterministic-agent-kernel) and [scope-rex-admission](experiments/scope-rex-admission) | executable admission kernels rather than product-wide copies |
 | mutation/provenance and cognitive-DAG work | existing Epistemos history, research canon, and memory projects | not split again because it overlaps published provenance and memory systems |
 
 ## Rebuilt dormant repositories
@@ -60,9 +60,9 @@ All four retained their original repository history; they were completed in plac
 
 | Repository | Tests | Main falsifier or limitation |
 |---|---:|---|
-| [belnap-evidence-gate](https://github.com/BlickandMorty/belnap-evidence-gate) | 6 | conflict or unknown evidence must abstain; altered receipts must fail replay |
-| [interrupt-score-router](https://github.com/BlickandMorty/interrupt-score-router) | 6 | escalation rate above the declared bound exposes static/hybrid collapse |
-| [confidence-ladder-monitor](https://github.com/BlickandMorty/confidence-ladder-monitor) | 8 | malformed scores/policies fail closed; the same stream must reproduce the same receipt head |
+| [belnap-evidence-gate](experiments/belnap-evidence-gate) | 6 | conflict or unknown evidence must abstain; altered receipts must fail replay |
+| [interrupt-score-router](experiments/interrupt-score-router) | 6 | escalation rate above the declared bound exposes static/hybrid collapse |
+| [confidence-ladder-monitor](experiments/confidence-ladder-monitor) | 8 | malformed scores/policies fail closed; the same stream must reproduce the same receipt head |
 
 ## External red-team references
 
@@ -74,7 +74,7 @@ The likely remembered AGPL project was [Shannon](https://github.com/KeygraphHQ/s
 | [BlickandMorty/strix](https://github.com/BlickandMorty/strix) | Apache-2.0 | multi-agent application-security orchestration and local run artifacts |
 | [BlickandMorty/pentagi](https://github.com/BlickandMorty/pentagi) | MIT | hierarchical flow/task/subtask execution and isolated tool workers |
 
-Original defensive work remains in [proof-carrying-security-lab](https://github.com/BlickandMorty/proof-carrying-security-lab). No AGPL source was copied into the original Apache-licensed security repositories.
+Original defensive work remains in [proof-carrying-security-lab](experiments/proof-carrying-security-lab). No AGPL source was copied into this Apache-licensed workspace.
 
 ## Deliberate non-public decision
 

@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 description = "Deterministic tiered confidence admission with health metrics and replay receipts"
-repository = "https://github.com/BlickandMorty/confidence-ladder-monitor"
+repository = "https://github.com/BlickandMorty/epistemos-labs/tree/main/experiments/confidence-ladder-monitor"
 
 [dependencies]
 sha2 = "0.10"
