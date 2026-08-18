@@ -1,0 +1,12 @@
+[package]
+name = "interrupt-score-router"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Auditable five-signal escalation router with hash-chained decisions"
+repository = "https://github.com/BlickandMorty/interrupt-score-router"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
