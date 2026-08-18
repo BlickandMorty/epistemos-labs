@@ -177,7 +177,7 @@ mod tests {
             path: "app.rs".into(),
             text: "let api_key = \"demo-secret\";".into(),
         };
-        let report = analyze(&scope(), &[file.clone()]).unwrap();
+        let report = analyze(&scope(), std::slice::from_ref(&file)).unwrap();
         assert_eq!(report.findings.len(), 1);
         assert!(!report.findings[0].evidence.excerpt.contains("demo-secret"));
         assert!(verify_evidence(&file, &report.findings[0].evidence));

@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "experiments/belnap-evidence-gate",
+    "experiments/confidence-ladder-monitor",
+    "experiments/interrupt-score-router",
+    "experiments/deterministic-agent-kernel",
+    "experiments/eidos-closed-citation",
+    "experiments/hyperdynamic-schema-repair",
+    "experiments/lattice-wbo-ledger",
+    "experiments/primitive-ir-lab",
+    "experiments/scope-rex-admission",
+    "experiments/vault-recall-benchmark",
+    "experiments/proof-carrying-security-lab",
+    "experiments/f-ulp-oracle",
+]

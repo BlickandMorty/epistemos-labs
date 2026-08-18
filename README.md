@@ -1,63 +1,80 @@
 # Epistemos Labs
 
-This is the map for the research and systems work I pulled out of Epistemos.
+A Rust workspace for proof-carrying agent, evidence, numerical, retrieval, and
+formal-methods experiments recovered from the broader Epistemos research line.
 
-For the commit-level source map, publication decisions, and validation record, see [`RECOVERY_AUDIT.md`](RECOVERY_AUDIT.md).
+The individual experiments predate this monorepo. They were consolidated in
+August 2026 to make the work easier to evaluate and to avoid presenting a set
+of small, related prototypes as portfolio padding. Their full Git histories
+were imported without squashing and remain reachable from this repository.
 
-The common idea is proof-carrying software: decisions should expose their scope, numerical kernels should expose their error, retrieval should expose its citations, schema repair should expose its patches, and research should expose what is proved versus what is still a candidate.
+## Unifying question
 
-## Start here
+What would software look like if a decision had to carry enough evidence to be
+replayed, challenged, bounded, or refused?
 
-| Project | What it shows | Status |
+The experiments answer from different levels: four-valued evidence, confidence
+admission, deterministic receipts, scoped authority, closed citations, typed
+intermediate representations, numerical error witnesses, and explicit
+weighted-bound accounting.
+
+## Workspace map
+
+| Experiment | Core idea | Verification |
 | --- | --- | --- |
-| [deterministic-agent-kernel](https://github.com/BlickandMorty/deterministic-agent-kernel) | deterministic decisions, hash-linked receipts, replay | working + tested |
-| [scope-rex-admission](https://github.com/BlickandMorty/scope-rex-admission) | bounded capability/risk/evidence admission | working + tested |
-| [eidos-closed-citation](https://github.com/BlickandMorty/eidos-closed-citation) | local retrieval whose quotes can be verified | working + tested |
-| [primitive-ir-lab](https://github.com/BlickandMorty/primitive-ir-lab) | EML and typed certificate-carrying primitives | working + tested |
-| [f-ulp-oracle](https://github.com/BlickandMorty/f-ulp-oracle) | binary16 conversion and ULP witnesses | working + tested |
-| [lattice-wbo-ledger](https://github.com/BlickandMorty/lattice-wbo-ledger) | explicit weighted-bound accounting | working + tested |
-| [hyperdynamic-schema-repair](https://github.com/BlickandMorty/hyperdynamic-schema-repair) | bounded repair with replayable patches | working + tested |
-| [vault-recall-benchmark](https://github.com/BlickandMorty/vault-recall-benchmark) | deterministic recall/MRR evaluation | working + tested |
-| [proof-carrying-security-lab](https://github.com/BlickandMorty/proof-carrying-security-lab) | authorized source analysis with evidence-gated findings | defensive working lab |
-| [belnap-evidence-gate](https://github.com/BlickandMorty/belnap-evidence-gate) | four-valued evidence admission, conflict abstention, replay receipts | working + tested |
-| [interrupt-score-router](https://github.com/BlickandMorty/interrupt-score-router) | five-signal bounded escalation with explicit falsifiers | working + tested |
-| [confidence-ladder-monitor](https://github.com/BlickandMorty/confidence-ladder-monitor) | tiered confidence admission, health metrics, receipt-chain replay | working + tested |
+| [belnap-evidence-gate](experiments/belnap-evidence-gate) | Belnap four-valued evidence and conflict abstention | Rust tests |
+| [confidence-ladder-monitor](experiments/confidence-ladder-monitor) | Tiered confidence admission and receipt-chain replay | Rust tests |
+| [interrupt-score-router](experiments/interrupt-score-router) | Bounded five-signal escalation with falsifiers | Rust tests |
+| [deterministic-agent-kernel](experiments/deterministic-agent-kernel) | Deterministic decisions and hash-linked replay receipts | Rust tests + demo |
+| [scope-rex-admission](experiments/scope-rex-admission) | Capability/risk/evidence admission under scope | Rust tests |
+| [eidos-closed-citation](experiments/eidos-closed-citation) | Local retrieval with checkable quote witnesses | Rust tests |
+| [primitive-ir-lab](experiments/primitive-ir-lab) | EML and certificate-carrying typed primitives | Rust tests |
+| [f-ulp-oracle](experiments/f-ulp-oracle) | Binary16 conversion and ULP witnesses | Rust tests |
+| [lattice-wbo-ledger](experiments/lattice-wbo-ledger) | Explicit weighted-bound accounting | Rust tests |
+| [hyperdynamic-schema-repair](experiments/hyperdynamic-schema-repair) | Bounded schema repair with replayable patches | Rust tests |
+| [vault-recall-benchmark](experiments/vault-recall-benchmark) | Deterministic recall/MRR evaluation | Rust tests |
+| [proof-carrying-security-lab](experiments/proof-carrying-security-lab) | Authorized source analysis with evidence-gated findings | Defensive Rust tests |
 
-## Systems and numerical work
+## Run everything
 
-| Project | What it shows | Status |
-| --- | --- | --- |
-| [ols-vs-gradient-descent](https://github.com/BlickandMorty/ols-vs-gradient-descent) | reproducible closed-form OLS and batch-gradient comparison | working + tested |
-| [Epistemos Windows](https://github.com/BlickandMorty/epistemos-windows) | native C++/Swift/Rust architecture and ABI scaffold | scaffold + tested boundaries |
-| [kinetic-protocol](https://github.com/BlickandMorty/kinetic-protocol) | local-first, deny-by-default tool execution bridge | working + tested |
-| [ethos-eval](https://github.com/BlickandMorty/ethos-eval) | offline-first deterministic LLM behavior evaluation | working + tested |
+```bash
+cargo test --workspace --all-targets
+cargo fmt --all -- --check
+cargo clippy --workspace --all-targets -- -D warnings
+```
 
-## The formal and research layer
+Individual experiments can also be run with `cargo test -p <package-name>`.
 
-| Project | What it contains | Status |
-| --- | --- | --- |
-| [epistemos-formal-primitives](https://github.com/BlickandMorty/epistemos-formal-primitives) | 246 actual Lean theorem/lemma declarations and an exact proof-status ledger | 209 proof terms present; 37 candidates |
-| [epistemos-research-canon](https://github.com/BlickandMorty/epistemos-research-canon) | the 5,749-line lattice explainer, theorem canon, Scope-Rex/substrate/EML/Eidos research, and recovery map | public research archive |
+## How claims are separated
 
-## How I separate claims
+- **Working** means executable source and focused tests are present.
+- **Witness** means an output carries inspectable evidence or replay material;
+  it is not automatically a formal proof.
+- **Proof term present** is reserved for Lean declarations with an actual term
+  and no placeholder.
+- **Candidate** means the mechanism is public research, not a proved theorem or
+  production guarantee.
 
-- “working” means there is focused source and a test suite.
-- “proof term present” means Lean has a term and that declaration does not use `sorry`.
-- “candidate” means the idea is intentionally public but not claimed as proved.
-- “research” means the document can be novel or useful without pretending it is a finished library.
+For the commit-level recovery map and validation record, see
+[RECOVERY_AUDIT.md](RECOVERY_AUDIT.md). The larger formal and research layers
+remain public in
+[epistemos-formal-primitives](https://github.com/BlickandMorty/epistemos-formal-primitives)
+and
+[epistemos-research-canon](https://github.com/BlickandMorty/epistemos-research-canon).
 
-## Source history
+## Consolidation and provenance
 
-The recovered work came from the regular [Epistemos](https://github.com/BlickandMorty/Epistemos) history, including the May 2026 research/checkpoint/salvage lines and the later lattice-coordinate explainer. `Epistemos-RETRO` is not the source for this collection.
+Each directory under `experiments/` was imported with `git subtree` without
+squashing. That keeps authorship, dates, and source commits in this graph while
+allowing redundant standalone repository pages to be retired. The source work
+came from regular Epistemos history and its recovered May 2026 research,
+checkpoint, and salvage lines—not from a newly invented August portfolio batch.
 
-## Security architecture boundary
+The defensive security experiment is an original, authorization-bounded lab.
+External red-team projects informed architectural study only; their code is not
+relicensed or copied into this workspace.
 
-The security lab is an original clean-room build. Shannon, OpenAEV, HackingBuddyGPT, and PentAGI were studied as architecture references. AGPL source from Shannon is not copied into these Apache-licensed repositories.
+## License
 
-Transparent upstream forks are kept separately for study and future contribution:
-
-- [Shannon](https://github.com/BlickandMorty/shannon) — AGPL-3.0 white-box AI pentesting
-- [Strix](https://github.com/BlickandMorty/strix) — Apache-2.0 autonomous application-security testing
-- [PentAGI](https://github.com/BlickandMorty/pentagi) — MIT multi-agent pentesting orchestration
-
-Fork status and upstream history are intentionally preserved. Original portfolio work lives in the non-fork repositories above.
+Apache-2.0 for the workspace unless an imported experiment contains a more
+specific license file, in which case that experiment's file governs its code.

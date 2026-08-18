@@ -1,5 +1,10 @@
 # Epistemos portfolio recovery audit
 
+> Consolidation note (August 2026): the small Rust repositories cataloged
+> below now live, with unsquashed Git history, under `experiments/` in this
+> workspace. Historical standalone links are retained as source records; the
+> monorepo README is the current navigation surface.
+
 Audit date: 2026-08-02
 
 ## Outcome
