@@ -1,0 +1,10 @@
+[package]
+name = "proof-carrying-security-lab"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "An authorized, read-only security analysis pipeline that reports only source-backed findings."
+
+[lib]
+path = "src/lib.rs"
+
