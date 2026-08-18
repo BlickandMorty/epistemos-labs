@@ -1,0 +1,10 @@
+[package]
+name = "lattice-wbo-ledger"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Auditable weighted-bound accounting for tiered lattice residency decisions."
+
+[lib]
+path = "src/lib.rs"
+
