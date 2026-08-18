@@ -1,0 +1,10 @@
+[package]
+name = "vault-recall-benchmark"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "A deterministic local retrieval benchmark with recall and reciprocal-rank witnesses."
+
+[lib]
+path = "src/lib.rs"
+
