@@ -1,0 +1,13 @@
+[package]
+name = "confidence-ladder-monitor"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Deterministic tiered confidence admission with health metrics and replay receipts"
+repository = "https://github.com/BlickandMorty/confidence-ladder-monitor"
+
+[dependencies]
+sha2 = "0.10"
+
+[lints.clippy]
+pedantic = "warn"
