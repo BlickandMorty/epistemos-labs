@@ -5,11 +5,16 @@
 > workspace. Historical standalone links are retained as source records; the
 > monorepo README is the current navigation surface.
 
-Audit date: 2026-08-02
+Original excavation: 2026-08-02; consolidation audit: 2026-08-17.
 
 ## Outcome
 
-The GitHub account now has 47 owned repositories: 46 public, one private, and 11 provenance-preserving forks. The only private repository is `epistemos-site`, retained privately because it is substantially duplicated by the already-public `meta-analytical-pfc` codebase.
+The GitHub account now has 20 repositories: 19 public, one private, three
+archived, and two forks. This is the result of deliberately consolidating the
+earlier 47-repository excavation rather than presenting related experiments as
+separate portfolio entries. The only private repository is `epistemos-site`,
+retained privately because it substantially overlaps the archived
+`meta-analytical-pfc` product history.
 
 Publication followed four rules:
 
@@ -66,25 +71,35 @@ All four retained their original repository history; they were completed in plac
 
 ## External red-team references
 
-The likely remembered AGPL project was [Shannon](https://github.com/KeygraphHQ/shannon), a white-box autonomous AI pentester. Reference copies are transparent GitHub forks, not relabeled original work:
+The likely remembered AGPL project was
+[Shannon](https://github.com/KeygraphHQ/shannon), a white-box autonomous AI
+pentester. The account retains an explicitly archived, unmodified GitHub fork
+at [BlickandMorty/shannon](https://github.com/BlickandMorty/shannon) for
+provenance and study. Strix and PentAGI were reviewed as upstream references
+but are not presented as owned portfolio repositories.
 
-| Fork | Upstream license | Why retain it |
-|---|---|---|
-| [BlickandMorty/shannon](https://github.com/BlickandMorty/shannon) | AGPL-3.0 | source-aware analysis, attack planning, exploit validation, report boundary |
-| [usestrix/strix](https://github.com/usestrix/strix) | Apache-2.0 | multi-agent application-security orchestration and local run artifacts |
-| [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | MIT | hierarchical flow/task/subtask execution and isolated tool workers |
-
-Original defensive work remains in [proof-carrying-security-lab](experiments/proof-carrying-security-lab). No AGPL source was copied into this Apache-licensed workspace.
+Original defensive work remains in
+[proof-carrying-security-lab](experiments/proof-carrying-security-lab). No
+Shannon, Strix, PentAGI, or other third-party implementation was copied or
+relicensed into this Apache-licensed workspace.
 
 ## Deliberate non-public decision
 
-`epistemos-site` remains private. It has 349 current files; 277 paths overlap the public `meta-analytical-pfc/brainiac-2.0` tree and 261 of those files are byte-identical. Its unique work is mostly a later presentation/site layer around the same PFC product. Publishing it as another standalone project would create misleading duplication rather than a distinct employer-facing artifact. Current files and all 37 commits produced zero matches in the credential-pattern audit.
+`epistemos-site` remains private. At the time of the duplication audit it had
+349 files; 277 paths overlapped the public `meta-analytical-pfc/brainiac-2.0`
+tree and 261 were byte-identical. Its unique work is mostly a later
+presentation layer around the same PFC product. Keeping it private avoids a
+misleading duplicate portfolio entry while preserving its history and the
+current screenshot showcase.
 
 ## Verification record
 
 - New and rebuilt repositories were scanned for common token, private-key, cloud-key, password-assignment, and secret-assignment patterns before publication.
 - Every newly published default branch was pushed through Git Credential Manager without printing or storing the credential.
-- GitHub Actions passed on the published commits for Belnap, interrupt routing, confidence ladder, OLS/GD, KINETIC, ETHOS, and Epistemos Windows.
+- GitHub Actions passed on the historical standalone commits for Belnap,
+  interrupt routing, and confidence ladder, and on OLS/GD, KINETIC, ETHOS, and
+  Epistemos Windows. The consolidated 12-experiment workspace also passes its
+  current Rust format, Clippy, and test workflow.
 - Belnap, interrupt routing, and OLS/GD were also installed and tested from clean clones.
 - Empty placeholders were not exposed as finished software.
 
