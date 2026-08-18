@@ -1,0 +1,10 @@
+[package]
+name = "primitive-ir-lab"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Typed, certificate-carrying primitive IR experiments recovered from Epistemos."
+
+[lib]
+path = "src/lib.rs"
+
