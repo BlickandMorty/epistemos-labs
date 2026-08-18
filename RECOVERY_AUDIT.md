@@ -71,8 +71,8 @@ The likely remembered AGPL project was [Shannon](https://github.com/KeygraphHQ/s
 | Fork | Upstream license | Why retain it |
 |---|---|---|
 | [BlickandMorty/shannon](https://github.com/BlickandMorty/shannon) | AGPL-3.0 | source-aware analysis, attack planning, exploit validation, report boundary |
-| [BlickandMorty/strix](https://github.com/BlickandMorty/strix) | Apache-2.0 | multi-agent application-security orchestration and local run artifacts |
-| [BlickandMorty/pentagi](https://github.com/BlickandMorty/pentagi) | MIT | hierarchical flow/task/subtask execution and isolated tool workers |
+| [usestrix/strix](https://github.com/usestrix/strix) | Apache-2.0 | multi-agent application-security orchestration and local run artifacts |
+| [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | MIT | hierarchical flow/task/subtask execution and isolated tool workers |
 
 Original defensive work remains in [proof-carrying-security-lab](experiments/proof-carrying-security-lab). No AGPL source was copied into this Apache-licensed workspace.
 
