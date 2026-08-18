@@ -1,0 +1,14 @@
+[package]
+name = "deterministic-agent-kernel"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "A small replayable decision kernel recovered from Epistemos research."
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "dak-demo"
+path = "src/main.rs"
+
